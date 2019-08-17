@@ -19,6 +19,22 @@
                 android:layout_height="wrap_content" android:id="@+id/name_text"
                 android:textAlignment="center"
                 style="@style/NameStyle"/>
-    </LinearLayout>
+        <ImageView
+                android:id="@+id/star_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/btn_star_big_on" android:layout_marginTop="@dimen/layout_margin"/>
 
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="715dp" tools:layout_editor_absoluteY="8dp" tools:layout_editor_absoluteX="8dp"
+            android:id="@+id/bio_scroll">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/bio_text" style="@style/NameStyle"
+                android:lineSpacingMultiplier="1.2" android:paddingEnd="@dimen/layout_padding"
+                android:paddingStart="@dimen/layout_padding" android:text="@string/bio"/>
+    </ScrollView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
