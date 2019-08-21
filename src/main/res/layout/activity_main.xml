@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            android:text="@={myName.name}"
+            name="myName"
+            type="com.example.aboutme.MyName" />
+    </data>
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -33,7 +35,7 @@
                 android:layout_height="wrap_content" android:id="@+id/done_button"
                 android:layout_gravity="center_horizontal" style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_marginTop="@dimen/layout_margin" android:fontFamily="@font/roboto"
-                />
+        />
         <TextView
                 android:text=""
                 android:layout_width="match_parent"
@@ -47,16 +49,17 @@
                 android:layout_height="wrap_content" android:contentDescription="@string/yellow_star"
                 app:srcCompat="@android:drawable/btn_star_big_on" android:layout_marginTop="@dimen/layout_margin"/>
 
-    <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="715dp" tools:layout_editor_absoluteY="8dp" tools:layout_editor_absoluteX="8dp"
-            android:id="@+id/bio_scroll">
-
-        <TextView
+        <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/bio_text" style="@style/NameStyle"
-                android:lineSpacingMultiplier="1.2" android:paddingEnd="@dimen/layout_padding"
-                android:paddingStart="@dimen/layout_padding" android:text="@string/bio"/>
-    </ScrollView>
+                android:layout_height="715dp" tools:layout_editor_absoluteY="8dp" tools:layout_editor_absoluteX="8dp"
+                android:id="@+id/bio_scroll">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/bio_text" style="@style/NameStyle"
+                    android:lineSpacingMultiplier="1.2" android:paddingEnd="@dimen/layout_padding"
+                    android:paddingStart="@dimen/layout_padding" android:text="@string/bio"/>
+        </ScrollView>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
